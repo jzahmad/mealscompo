@@ -10,7 +10,9 @@ function App() {
   return (
     <main>
     <Search/>
+    <h1>Favourites</h1>
     <Fav/>
+    <h1>Meals</h1>
     {!showModal && <Meals/>}
     {showModal &&  <Modal/>}
     </main>

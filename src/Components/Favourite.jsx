@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import './Favourites.css';
 
 export default function Favourite() {
-  const { fav, removefavourite } = useGlobalContext();
+  const { fav, removefavourite, selectMeal } = useGlobalContext();
 
   // Save favorites to local storage whenever fav changes
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function Favourite() {
     <div className="favourite-container">
       {fav.map((meal) => (
         <div className="favourite-card" key={meal.idMeal}>
-          <img src={meal.strMealThumb} alt={meal.strMeal} />
+          <img src={meal.strMealThumb} alt={meal.strMeal} onClick={() => selectMeal(meal.idMeal)}/>
           <div>
             <h4>{meal.strMeal}</h4>
             <button onClick={() => removefavourite(meal.idMeal)}>Remove</button>
