@@ -17,7 +17,7 @@ export default function Favourite() {
           <img src={meal.strMealThumb} alt={meal.strMeal} onClick={() => selectMeal(meal.idMeal)}/>
           <div>
             <h4>{meal.strMeal}</h4>
-            <button onClick={() => removefavourite(meal.idMeal)}>Remove</button>
+            <button style={{ backgroundColor: 'green'}} onClick={() => removefavourite(meal.idMeal)}>Remove</button>
           </div>
         </div>
       ))}
