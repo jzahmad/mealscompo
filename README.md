@@ -1,3 +1,2 @@
-for live hosting
 
-https://jzahmad.github.io/mealscompo
+https://jzahmad.github.io/mealscompo/
